@@ -1,1 +1,6 @@
-archivo estilo traderpal
+#titleInterna .title {
+    color: #2340d5;
+}
+body {
+    background-color: #1d184a !important;
+}
