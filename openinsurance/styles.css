@@ -2,6 +2,22 @@
   color: #2340d5;
 }
 
-body {
-  background-color: #1d184a !important;
+body.redbridge-assist {
+  background-color: #1d184a;
+}
+
+body.redbridge-assist.customcontform input[type*="text"],
+body.redbridge-assist.customcontform input[type*="email"],
+.row-field span.form-control,
+body.redbridge-assist.customcontform input[type*="password"],
+body.redbridge-assist.customcontform select,
+body.redbridge-assist.customcontform textarea {
+  border: solid 1px #241f57;
+  background: #241f57;
+  color: #ffffff;
+}
+
+body.redbridge-assist.customcontform #textInterna label {
+  font-weight: 500;
+  color: #ffffff;
 }
