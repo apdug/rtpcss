@@ -2,7 +2,12 @@
   color: #2340d5;
 }
 
+body.redbridge-assist header {
+  display: none;
+}
+
 body.redbridge-assist {
+  padding: 0;
   background-color: #1d184a;
 }
 
