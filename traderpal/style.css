@@ -22,3 +22,7 @@ body.redbridge-assist.customcontform #textInterna label {
   font-weight: 500;
   color: #ffffff;
 }
+
+body.redbridge-assist.customcontform .title_form {
+  background: #241f57;
+}
