@@ -10,6 +10,11 @@ body.redbridge-assist {
   background-color: #1d184a;
 }
 
+body.redbridge-assist .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 body.redbridge-assist h2 {
   font-size: 24px;
   line-height: 30px;
