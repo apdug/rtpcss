@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-* {
-  font-family: "Inter", sans-serif;
+*,
+.customcontform .title_form,
+b,
+strong,
+p {
+  font-family: "Inter", sans-serif !important;
 }
 
 body.redbridge-assist {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
   padding: 0;
   background-color: #1d184a;
 }
