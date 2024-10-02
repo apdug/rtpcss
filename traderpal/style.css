@@ -26,3 +26,7 @@ body.redbridge-assist.customcontform #textInterna label {
 body.redbridge-assist.customcontform .title_form {
   background: #241f57;
 }
+
+body.redbridge-assist.customcontform .instanceNum {
+  color: #1d184a;
+}
