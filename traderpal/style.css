@@ -1,10 +1,20 @@
-body.redbridge-assist header {
-  display: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body.redbridge-assist {
+  font-family: "Inter", sans-serif;
   padding: 0;
   background-color: #1d184a;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+body.redbridge-assist header,
+body.redbridge-assist footer {
+  display: none;
 }
 
 body.redbridge-assist.customcontform input[type*="text"],
@@ -15,7 +25,14 @@ body.redbridge-assist.customcontform select,
 body.redbridge-assist.customcontform textarea {
   border: solid 1px #241f57;
   background: #241f57;
-  color: #ffffff;
+  color: rgb(255 255 255 / 20%);
+  border-radius: 16px;
+}
+
+body.redbridge-assist.customcontform input::placeholder,
+body.redbridge-assist.customcontform select::placeholder,
+body.redbridge-assist.customcontform textarea::placeholder {
+  color: #ffffff33;
 }
 
 body.redbridge-assist.customcontform #textInterna label {
@@ -25,8 +42,19 @@ body.redbridge-assist.customcontform #textInterna label {
 
 body.redbridge-assist.customcontform .title_form {
   background: #241f57;
+  border-radius: 16px;
 }
 
 body.redbridge-assist.customcontform .instanceNum {
   color: #1d184a;
+  border-radius: 16px;
+  margin-top: 16px;
+}
+
+body.redbridge-assist.customcontform .instanceNum strong {
+  font-weight: 700;
+}
+
+body.redbridge-assist.customcontform .customerror {
+  color: #ff6363;
 }
