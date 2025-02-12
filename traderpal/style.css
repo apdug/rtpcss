@@ -130,3 +130,19 @@ body .sendtoemail span button {
 body .sendtoemail span button {
   height: 48px;
 }
+
+body .pdf-download h1 {
+  font-size: 26px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+body .pdf-download #result {
+  border-bottom: none;
+}
+
+body .fancybox-close {
+  top: -10px;
+  right: -10px;
+}
