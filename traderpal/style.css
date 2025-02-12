@@ -101,3 +101,27 @@ body.redbridge-assist.customcontform .btn.btn-add-more {
 body.redbridge-assist.customcontform .cardinal {
   background: #ff6363;
 }
+
+body .pdf-download,
+body .fancybox-wrap,
+body .fancybox-opened .fancybox-skin {
+  background-color: #1d184a;
+}
+
+body.pdf-download .main-content-content {
+  background-color: #1d184a;
+}
+
+body .pdf-download h1,
+body .pdf-download p,
+body .pdf-download p span,
+body .pdf-download span {
+  color: white;
+}
+
+body .pdf-download #result a,
+body .pdf-download a,
+body .pdf-download button,
+.sendtoemail span button {
+  background: #e52b67;
+}
