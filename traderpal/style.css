@@ -122,6 +122,11 @@ body .pdf-download span {
 body .pdf-download #result a,
 body .pdf-download a,
 body .pdf-download button,
-.sendtoemail span button {
+body .sendtoemail span button {
   background: #e52b67;
+  border-radius: 7px;
+}
+
+body .sendtoemail span button {
+  height: 48px;
 }
