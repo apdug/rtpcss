@@ -109,7 +109,6 @@
         // Verificar periódicamente si .sendtoemail está visible
         const checkVisibilityInterval = setInterval(() => {
           if ($('.sendtoemail').is(':visible')) {
-            alert('adads')
             console.log('.sendtoemail está visible. Ejecutando setupDisonclickPlugin...');
             
             // Detener el intervalo
