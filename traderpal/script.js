@@ -63,49 +63,57 @@
   };
 })(jQuery);
 
+// Función que registra el plugin y lo usa con los enlaces de #result a
+function setupDisonclickPlugin() {
+  console.log('.sendtoemail está visible. Registrando plugin y configurando descargas...');
+
+  // Uso del plugin para descargar archivos
+  $('#result a').disonclick(function(e, $link) {
+    e.preventDefault();
+    var href = $link.attr('href');
+
+    console.log('Iniciando descarga...');
+
+    fetch(href)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error al descargar el archivo.');
+        }
+        return response.blob();
+      })
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+
+        // Nombre del archivo personalizado
+        a.download = 'T29-QQL3TJM1.pdf'; // Aquí especificas el nombre deseado
+
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+
+        console.log('Descarga completada.');
+        $link.disonclick('off');
+      })
+      .catch(error => {
+        console.error('Error durante la descarga:', error);
+        $link.disonclick('off');
+      });
+  });
+}
+
 // Verificar periódicamente si .sendtoemail está visible
 const checkVisibilityInterval = setInterval(() => {
   if ($('.sendtoemail').is(':visible')) {
-    console.log('.sendtoemail está visible. Ejecutando código...');
-
-    // Uso del plugin para descargar archivos
-    $('#result a').disonclick(function(e, $link) {
-      e.preventDefault();
-      var href = $link.attr('href');
-
-      console.log('Iniciando descarga...');
-
-      fetch(href)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Error al descargar el archivo.');
-          }
-          return response.blob();
-        })
-        .then(blob => {
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.style.display = 'none';
-          a.href = url;
-
-          // Nombre del archivo personalizado
-          a.download = 'T29-QQL3TJM1.pdf'; // Aquí especificas el nombre deseado
-
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(url);
-          document.body.removeChild(a);
-
-          console.log('Descarga completada.');
-          $link.disonclick('off');
-        })
-        .catch(error => {
-          console.error('Error durante la descarga:', error);
-          $link.disonclick('off');
-        });
-    });
-
-    // Detener el intervalo después de ejecutar el código
+    console.log('.sendtoemail está visible. Ejecutando setupDisonclickPlugin...');
+    
+    // Detener el intervalo
     clearInterval(checkVisibilityInterval);
+
+    // Llamar a la función que registra el plugin y lo usa
+    setupDisonclickPlugin();
   }
 }, 500); // Verificar cada 500 ms
