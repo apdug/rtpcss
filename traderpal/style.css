@@ -146,3 +146,22 @@ body .fancybox-close {
   top: -10px;
   right: -10px;
 }
+
+
+/* CLK */
+.pdf-download {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: anchor-center;
+}
+
+.fancybox-item.fancybox-close {
+position: fixed;
+top: 15px;
+right: 15px;
+}
+
